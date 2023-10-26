@@ -90,16 +90,32 @@ const questions = []; {
 };
 
 
-
-
-
-
-
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = data => {
+    fs.writeFile('Read.md', data, err =>{
+        if (err){
+            console.log(err);
+            return;
+        } else{
+            console.log("Your README file has been generated!")
+        }
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {}
+const init = () => {
+    questions()
+.then(answers => {
+    return generateMarkdown(answers);
+    })
+    .then(data => {
+        return writeToFile(data);
+    })
+    .catch(err => {
+        console.log(err);
+    })
 
+}
 // Function call to initialize app
 init();

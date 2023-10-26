@@ -27,12 +27,40 @@ if (license === 'None') {
 };
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {}
+const renderLicenseLink = license => {
+  let licenseLink = 'https://choosealicense.com/licenses/';
+}
+// If there is no license, return an empty string
+if (license === 'None') {
+  return licenseLink = '';
+} else if (license === 'MIT') {
+  return licenseLink = licenseLink + 'mit/';
+} else if (license === 'GNU AGPLv3') {
+  return licenseLink = licenseLink + 'agpl-3.0/';
+} else if (license === 'GNU GPLv3') {
+  return licenseLink = licenseLink + 'gpl-3.0/';
+} else if (license === 'GNU LGPLv3') {
+  return licenseLink = licenseLink + 'lgpl-3.0/';
+} else if (license === 'Apache 2.0') {
+  return licenseLink = licenseLink + 'apache-2.0/';
+} else if (license === 'Mozilla 2.0') {
+  return licenseLink = licenseLink + 'mpl-2.0/';
+} else if (license === 'Boost Software') {
+  return licenseLink = licenseLink + 'bsl-1.0/';
+} else if (license ===  'Unlicense') {
+  return licenseLink = licenseLink + 'unlicense/';
+};
 
 // TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {}
+const renderLicenseSection = License => {
+// If there is no license, return an empty string
+if (license === 'None'){
+  return '';
+}
+};
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
